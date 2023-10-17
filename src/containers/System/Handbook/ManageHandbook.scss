@@ -1,0 +1,22 @@
+.manage-handbook-container {
+  padding: 5px 15px;
+  margin: 10px 100px;
+  text-align: center;
+
+  .ms-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #0071ba;
+  }
+
+  .manage-handbook-body {
+    .somthing-wrong {
+      min-width: 300px;
+      min-height: 200px;
+    }
+  }
+}
