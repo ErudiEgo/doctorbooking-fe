@@ -25,7 +25,7 @@ class ManageDoctor extends Component {
       listDoctors: [],
       hasOldData: false,
 
-      //Save to doctor_infor table
+      //Save to Doctor_Infor table
       listPrice: [],
       listPayment: [],
       listProvince: [],
