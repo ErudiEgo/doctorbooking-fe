@@ -1,6 +1,9 @@
 Dự án Doctorbooking
 - FE: https://github.com/ErudiEgo/doctorbooking-fe
 - BE: https://github.com/ErudiEgo/doctorbooking-be
+
+- Phiên bản Database: PostgresSQL
+___
 - Tài khoản Admin:
     User: admin@gmail.com
     Password: 123456
@@ -8,8 +11,9 @@ Dự án Doctorbooking
     User: doctor[n]@gmail.com với n = 1..9
     Password: 123456
 
-Dự án Doctorbooking được mô phỏng theo trang [Bookingcare](https://bookingcare.vn/).
-Dự án này được hướng dẫn bởi Eric trên channel Youtube/HoiDanIt: https://www.youtube.com/@hoidanit
+- Dự án Doctorbooking được mô phỏng theo trang [Bookingcare](https://bookingcare.vn/).
+- Dự án này được hướng dẫn bởi Eric trên channel Youtube/HoiDanIt: https://www.youtube.com/@hoidanit
+_____________________________________________________________
 _____________________________________________________________
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
