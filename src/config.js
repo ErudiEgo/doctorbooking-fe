@@ -1,6 +1,7 @@
+require("dotenv").config(); // this is important!
 export default {
   api: {
-    API_BASE_URL: "https://doctorbooking-be.onrender.com",
+    API_BASE_URL: process.env.API_BASE_URL,
     ROUTER_BASE_NAME: null,
   },
   app: {

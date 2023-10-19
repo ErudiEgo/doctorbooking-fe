@@ -77,7 +77,9 @@ class RemedyModal extends Component {
         //backdrop={true}
       >
         <div className="modal-header">
-          <h5 className="modal-title">Gui hoa don kham benh thanh cong</h5>
+          <h5 className="modal-title">
+            <FormattedMessage id="manage-remedy.title" />
+          </h5>
           <button
             className="close"
             type="button"
@@ -90,7 +92,9 @@ class RemedyModal extends Component {
         <ModalBody>
           <div className="row">
             <div className="col-6 form-group">
-              <label>Email benh nhan: </label>
+              <label>
+                <FormattedMessage id="manage-remedy.email" />
+              </label>
               <input
                 className="form-control"
                 type="email"
@@ -99,7 +103,9 @@ class RemedyModal extends Component {
               />
             </div>
             <div className="col-6 form-group">
-              <label>Chon file don thuoc: </label>
+              <label>
+                <FormattedMessage id="manage-remedy.bill-prescription" />
+              </label>
               <input
                 className="form-control"
                 type="file"

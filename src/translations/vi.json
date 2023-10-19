@@ -97,12 +97,19 @@
     "select-date": "Chọn ngày khám",
     "order": "STT",
     "date": "Thời gian khám",
-    "emailr": "Email",
+    "email": "Email",
     "name": "Họ và tên",
+    "phonenumber": "Điện thoại",
     "address": "Địa chỉ",
     "gender": "Giới tính",
     "actions": "Actions",
     "save": "Save"
+  },
+
+  "manage-remedy": {
+    "title": "Đơn thuốc",
+    "email": "Email",
+    "bill-prescription": "Gửi bệnh án"
   },
   "manage-handbook": {
     "title": "Quản lý cẩm nang"

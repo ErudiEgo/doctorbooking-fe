@@ -165,6 +165,9 @@ class ManagePatient extends Component {
                         <FormattedMessage id="manage-patient.name" />
                       </th>
                       <th>
+                        <FormattedMessage id="manage-patient.phonenumber" />
+                      </th>
+                      <th>
                         <FormattedMessage id="manage-patient.address" />
                       </th>
                       <th>
@@ -181,18 +184,21 @@ class ManagePatient extends Component {
                           language === LANGUAGES.VI
                             ? item.timeTypeDataPatient.valueVi
                             : item.timeTypeDataPatient.valueEn;
+                        let genderDefault = null;
                         let gender =
                           language === LANGUAGES.VI
                             ? item.patientData.genderData.valueVi
                             : item.patientData.genderData.valueEn;
+
                         return (
                           <tr key={index}>
                             <td>{index + 1}</td>
-                            <td>{item.timeTypeDataPatient.valueVi}</td>
+                            <td>{time}</td>
                             <td>{item.patientData.email}</td>
                             <td>{item.patientData.firstName}</td>
+                            <td>{item.patientData.phonenumber}</td>
                             <td>{item.patientData.address}</td>
-                            <td>{item.patientData.genderData.valueVi}</td>
+                            <td>{gender}</td>
                             <td>
                               <button
                                 className="mp-btn-confirm"

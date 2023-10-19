@@ -92,10 +92,8 @@ class BookingModal extends Component {
     });
   };
 
-  handleChangeSelect = (seletedOption) => {
-    this.setState({
-      selectedGender: seletedOption,
-    });
+  handleChangeSelect = (selectedOption) => {
+    this.setState({ selectedGender: selectedOption });
   };
 
   buildTimeBooking = (dataTime) => {
@@ -134,17 +132,18 @@ class BookingModal extends Component {
   handleConfirmBooking = async () => {
     let date = new Date(this.state.birthday).getTime();
     let timeString = this.buildTimeBooking(this.props.dataTime);
-    let doctorName = this.buildTimeBooking(this.props.dataTime);
+    let doctorName = this.buildDoctorName(this.props.dataTime);
 
     let res = await postPatientBookingAppointmentService({
       fullName: this.state.fullName,
-      phoneNumber: this.state.phoneNumber,
+      phonenumber: this.state.phonenumber,
       email: this.state.email,
       address: this.state.address,
       reason: this.state.reason,
       date: this.props.dataTime.date,
       birthday: date,
-      selectedGender: this.state.selectedGender.value,
+
+      gender: this.state.selectedGender.value,
       doctorId: this.state.doctorId,
       timeType: this.state.timeType,
 
@@ -152,6 +151,8 @@ class BookingModal extends Component {
       timeString: timeString,
       doctorName: doctorName,
     });
+
+    console.log("Check res: ", res);
 
     if (res && res.errCode === 0) {
       toast.success("Booking a new appointment succeed~");
@@ -163,11 +164,14 @@ class BookingModal extends Component {
 
   render() {
     // Toggle = {}
+
+    console.log("Check selectedGender: ", this.state.selectedGender);
     let { isOpenModal, closeBookingClose, dataTime } = this.props;
     let doctorId = "";
     if (dataTime && !_.isEmpty(dataTime)) {
       doctorId = dataTime.doctorId;
     }
+
     return (
       <Modal
         isOpen={isOpenModal}
@@ -179,7 +183,6 @@ class BookingModal extends Component {
         <div className="booking-modal-content">
           <div className="booking-modal-header">
             <span className="left">
-              {/* <FormattedMessage id="" /> */}
               <FormattedMessage id="patient.booking-modal.title" />
             </span>
             <span className="right" onClick={closeBookingClose}>
@@ -187,7 +190,6 @@ class BookingModal extends Component {
             </span>
           </div>
           <div className="booking-modal-body">
-            {/* { JSON.stringify(dataTime) } */}
             <div className="doctor-infor">
               <ProfileDoctor
                 doctorId={doctorId}
@@ -197,7 +199,7 @@ class BookingModal extends Component {
                 isShowPrice={true}
               />
             </div>
-            {/* <div className="price">Gia kham: 500.000 VND</div> */}
+
             <div className="row">
               <div className="col-4 form-group">
                 <label>
@@ -238,7 +240,7 @@ class BookingModal extends Component {
                 <input
                   className="form-control"
                   onChange={(event) =>
-                    this.handleOnChangeInput(event, "phoneNumber")
+                    this.handleOnChangeInput(event, "phonenumber")
                   }
                 />
               </div>

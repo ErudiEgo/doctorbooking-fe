@@ -96,12 +96,18 @@
     "select-date": "Select date",
     "order": "Order",
     "date": "Date",
-    "emailr": "email",
+    "email": "Email",
     "name": "Name",
     "address": "Address",
+    "phonenumber": "Phonenumber",
     "gender": "Gender",
     "actions": "Actions",
     "save": "Save"
+  },
+  "manage-remedy": {
+    "title": "Manage remedy",
+    "email": "Email",
+    "bill-prescription": "Send remedy"
   },
   "manage-handbook": {
     "title": "Manage handbook"

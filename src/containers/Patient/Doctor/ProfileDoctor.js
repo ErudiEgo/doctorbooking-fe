@@ -132,7 +132,7 @@ class ProfileDoctor extends Component {
               language === LANGUAGES.VI && (
                 <NumberFormat
                   className="currency"
-                  value={dataProfile.for.priceTypeData.valueVi}
+                  value={dataProfile.Doctor_Infor.priceTypeData.valueVi}
                   displayType={"text"}
                   thousandSeparator={true}
                   suffix={" VND"}
