@@ -1,3 +1,17 @@
+Dự án Doctorbooking
+- FE: https://github.com/ErudiEgo/doctorbooking-fe
+- BE: https://github.com/ErudiEgo/doctorbooking-be
+- Tài khoản Admin:
+    User: admin@gmail.com
+    Password: 123456
+- Các tài khoản bác sĩ:
+    User: doctor[n]@gmail.com với n = 1..9
+    Password: 123456
+
+Dự án Doctorbooking được mô phỏng theo trang [Bookingcare](https://bookingcare.vn/).
+Dự án này được hướng dẫn bởi Eric trên channel Youtube/HoiDanIt: https://www.youtube.com/@hoidanit
+_____________________________________________________________
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
